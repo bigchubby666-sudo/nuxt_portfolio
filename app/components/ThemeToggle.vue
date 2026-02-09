@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div ref="wrapper" class="relative">
     <button
       type="button"
       class="inline-flex items-center gap-1 rounded-full border border-slate-200/70 bg-white/70 px-3 py-1 text-xs font-medium text-slate-800 shadow-sm backdrop-blur dark:border-white/15 dark:bg-slate-900/70 dark:text-slate-100"
@@ -32,12 +32,16 @@ function change(next: 'light' | 'dark' | 'system') {
   open.value = false
 }
 
-onClickOutside(
-  computed(() => (open.value ? document.body : null)),
-  () => {
+const wrapper = ref<HTMLElement | null>(null)
+
+function handleClickOutside(e: MouseEvent) {
+  if (wrapper.value && !wrapper.value.contains(e.target as Node)) {
     open.value = false
-  },
-)
+  }
+}
+
+onMounted(() => document.addEventListener('click', handleClickOutside))
+onUnmounted(() => document.removeEventListener('click', handleClickOutside))
 </script>
 
 <style scoped>
