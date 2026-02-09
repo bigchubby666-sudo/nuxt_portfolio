@@ -1,21 +1,21 @@
 <template>
   <div class="space-y-8">
     <NuxtLink
-      to="/"
+      :to="localePath('/')"
       class="text-sm text-slate-700 underline-offset-4 hover:underline dark:text-slate-300"
     >
-      ← Back to home
+      ← {{ t('projects.back') }}
     </NuxtLink>
 
     <div
-      v-if="project"
+      v-if="localizedProject"
       class="overflow-hidden rounded-2xl border border-slate-200/60 bg-white/80 shadow-sm dark:border-white/10 dark:bg-white/5"
     >
       <div class="aspect-[16/9] w-full bg-slate-100 dark:bg-white/5">
         <img
-          v-if="project.photoUrl"
-          :src="project.photoUrl"
-          :alt="project.title"
+          v-if="localizedProject.photoUrl"
+          :src="localizedProject.photoUrl"
+          :alt="localizedProject.title"
           class="h-full w-full object-cover"
         />
       </div>
@@ -23,16 +23,16 @@
       <div class="space-y-5 p-6 sm:p-8">
         <div>
           <h1 class="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">
-            {{ project.title }}
+            {{ localizedProject.title }}
           </h1>
           <p class="mt-3 text-slate-700 dark:text-slate-300">
-            {{ project.description }}
+            {{ localizedProject.description }}
           </p>
         </div>
 
         <div class="flex flex-wrap gap-2">
           <span
-            v-for="tag in project.stack"
+            v-for="tag in localizedProject.stack"
             :key="tag"
             class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1 text-xs text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
           >
@@ -42,22 +42,22 @@
 
         <div class="flex flex-wrap gap-3">
           <a
-            v-if="project.githubUrl"
-            :href="project.githubUrl"
+            v-if="localizedProject.githubUrl"
+            :href="localizedProject.githubUrl"
             target="_blank"
             rel="noreferrer"
             class="btn-secondary"
           >
-            GitHub
+            {{ t('projects.github') }}
           </a>
           <a
-            v-if="project.liveDemoUrl"
-            :href="project.liveDemoUrl"
+            v-if="localizedProject.liveDemoUrl"
+            :href="localizedProject.liveDemoUrl"
             target="_blank"
             rel="noreferrer"
             class="btn-primary"
           >
-            Live Demo
+            {{ t('projects.liveDemo') }}
           </a>
         </div>
       </div>
@@ -67,7 +67,7 @@
       v-else
       class="rounded-2xl border border-slate-200/60 bg-white/80 p-6 dark:border-white/10 dark:bg-white/5"
     >
-      <p class="text-slate-700 dark:text-slate-200">Project not found.</p>
+      <p class="text-slate-700 dark:text-slate-200">{{ t('projects.notFound') }}</p>
     </div>
   </div>
 </template>
@@ -75,15 +75,28 @@
 <script setup lang="ts">
 import { projects } from '~/data/projects'
 
+const { t, te } = useI18n()
+const localePath = useLocalePath()
 const route = useRoute()
 const slug = computed(() => String(route.params.slug ?? ''))
 const project = computed(() => projects.find((p) => p.slug === slug.value))
+const localizedProject = computed(() => {
+  if (!project.value) return null
+  const base = `projects.items.${project.value.slug}`
+  return {
+    ...project.value,
+    title: te(`${base}.title`) ? t(`${base}.title`) : project.value.title,
+    description: te(`${base}.description`) ? t(`${base}.description`) : project.value.description,
+  }
+})
 
 useSeoMeta({
   title: computed(() =>
-    project.value ? `${project.value.title} — Portfolio` : 'Project — Portfolio',
+    localizedProject.value
+      ? `${localizedProject.value.title} — Portfolio`
+      : t('projects.metaTitle'),
   ),
-  description: computed(() => project.value?.description),
+  description: computed(() => localizedProject.value?.description),
 })
 </script>
 

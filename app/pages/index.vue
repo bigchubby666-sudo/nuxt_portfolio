@@ -18,5 +18,12 @@ import EducationSection from '~/components/sections/EducationSection.vue'
 import ProjectsSection from '~/components/sections/ProjectsSection.vue'
 import ContactMeSection from '~/components/sections/ContactMeSection.vue'
 import OverviewSection from '~/components/sections/OverviewSection.vue'
+
+const { t } = useI18n()
+
+useSeoMeta({
+  title: computed(() => `${t('overview.title')} — Portfolio`),
+  description: computed(() => t('overview.subtitle')),
+})
 </script>
 

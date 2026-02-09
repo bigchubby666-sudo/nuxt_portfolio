@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "about": "Sobre mi",
+    "employment": "Experiencia",
+    "education": "Educacion",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "sections": {
+    "about": "Sobre mi",
+    "employment": "Experiencia",
+    "education": "Educacion",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "overview": {
+    "title": "Desarrollador Full-Stack Senior",
+    "subtitle": "Next.js, Node.js, PostgreSQL. APIs, AI/LLM, e integraciones de plataforma para productos web modernos.",
+    "cta": {
+      "projects": "Ver proyectos",
+      "contact": "Contactarme"
+    }
+  },
+  "about": {
+    "photoAlt": "Foto de perfil",
+    "p1": "Soy un desarrollador full-stack con una pasion de larga data por el desarrollo de software y el aprendizaje continuo. Construyo plataformas web confiables y escalables con foco en arquitectura limpia, codigo mantenible y decisiones tecnicas pragmaticas alineadas a las necesidades del negocio.",
+    "p2": "Mi experiencia principal se centra en Next.js, Node.js y PostgreSQL, complementada por Supabase, automatizacion de flujos con n8n e integraciones de AI/LLM, incluyendo arquitecturas basadas en RAG. Tambien trabajo comodamente en entornos mixtos con frontends en Angular y backends en Django/DRF."
+  },
+  "contact": {
+    "body": "Agrega tu metodo de contacto preferido aqui (email, formulario, Calendly, etc).",
+    "email": "Enviar email",
+    "linkedin": "Mensaje en LinkedIn"
+  },
+  "education": {
+    "photoAlt": "Campus universitario",
+    "school": "Universidad Tecnologica Nacional (UTN) — Argentina",
+    "dates": "2010 – 2015",
+    "program": "Tecnico Universitario en Programacion",
+    "degree": "Licenciatura en Ciencias de la Computacion"
+  },
+  "employment": {
+    "items": [
+      {
+        "role": "Desarrollador Full-Stack Senior",
+        "dates": "May 2022 – Dec 2025",
+        "bullets": [
+          "Lidere el diseno de plataformas full-stack con Next.js, Node.js y PostgreSQL.",
+          "Cree APIs REST escalables con foco en autenticacion, validacion y performance.",
+          "Lidere integraciones complejas con plataformas ERP/CMS y servicios externos.",
+          "Implemente Supabase para autenticacion, almacenamiento y tiempo real.",
+          "Entregue funcionalidades de AI/LLM, incluyendo arquitecturas RAG."
+        ]
+      },
+      {
+        "role": "Desarrollador Full-Stack",
+        "dates": "Mar 2020 – Apr 2022",
+        "bullets": [
+          "Desarrolle apps end-to-end en frontend, backend y base de datos.",
+          "Cree servicios backend con Node.js y PostgreSQL.",
+          "Implemente frontends modulares en Angular.",
+          "Integre APIs de terceros y servicios internos."
+        ]
+      },
+      {
+        "role": "Desarrollador Backend / Software",
+        "dates": "Oct 2018 – Jan 2020",
+        "bullets": [
+          "Cree APIs REST con Django y Django REST Framework.",
+          "Modele bases de datos relacionales y optimice consultas.",
+          "Implemente autenticacion, autorizacion y validaciones.",
+          "Integre servicios backend con frontends y APIs externas."
+        ]
+      },
+      {
+        "role": "Desarrollador de Software Junior",
+        "dates": "Aug 2016 – Jun 2018",
+        "bullets": [
+          "Entregue funcionalidades pequenas y medianas con supervision senior.",
+          "Implemente componentes frontend y endpoints backend.",
+          "Corregi bugs, refactorice codigo y di soporte a apps existentes."
+        ]
+      },
+      {
+        "role": "Practicante / Trainee de Programacion",
+        "dates": "Apr 2015 – Jul 2016",
+        "bullets": [
+          "Asisti en el desarrollo de apps web simples y herramientas internas.",
+          "Apoye tareas de testing, debugging y documentacion.",
+          "Aplique fundamentos de programacion en escenarios practicos."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "back": "Volver al inicio",
+    "github": "GitHub",
+    "liveDemo": "Demo en vivo",
+    "notFound": "Proyecto no encontrado.",
+    "metaTitle": "Proyecto — Portafolio",
+    "items": {
+      "portfolio-nuxt": {
+        "title": "Sitio de Portafolio",
+        "description": "Un portafolio personal rapido con navegacion por anclas, paginas de detalle y una interfaz oscura limpia."
+      },
+      "supabase-app": {
+        "title": "App con Supabase",
+        "description": "Ejemplo de app CRUD usando Supabase como backend."
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "about": "About Me",
+    "employment": "Employment",
+    "education": "Education",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "sections": {
+    "about": "About Me",
+    "employment": "Employment History",
+    "education": "Education",
+    "projects": "Projects",
+    "contact": "Contact Me"
+  },
+  "overview": {
+    "title": "Senior Full-Stack Developer",
+    "subtitle": "Next.js, Node.js, PostgreSQL. APIs, AI/LLM, and platform integrations for modern web products.",
+    "cta": {
+      "projects": "View projects",
+      "contact": "Contact me"
+    }
+  },
+  "about": {
+    "photoAlt": "Portrait photo",
+    "p1": "I am a full-stack developer with a long-standing passion for software development and continuous learning. I build reliable, scalable web platforms with a focus on clean architecture, maintainable code, and pragmatic technical decisions aligned with business needs.",
+    "p2": "My core experience is centered around Next.js, Node.js, and PostgreSQL, complemented by Supabase, workflow automation with n8n, and AI/LLM integrations, including RAG-based architectures. I also work comfortably in mixed environments with Angular frontends and Django/DRF backends."
+  },
+  "contact": {
+    "body": "Add your preferred contact method here (email, form, Calendly, etc).",
+    "email": "Email me",
+    "linkedin": "Message on LinkedIn"
+  },
+  "education": {
+    "photoAlt": "University campus",
+    "school": "Universidad Tecnologica Nacional (UTN) — Argentina",
+    "dates": "2010 – 2015",
+    "program": "University Technician in Programming",
+    "degree": "Bachelor Degree in Computer Science"
+  },
+  "employment": {
+    "items": [
+      {
+        "role": "Senior Full-Stack Developer",
+        "dates": "May 2022 – Dec 2025",
+        "bullets": [
+          "Owned full-stack platform design using Next.js, Node.js, and PostgreSQL.",
+          "Built scalable REST APIs with auth, validation, and performance focus.",
+          "Led complex API integrations with ERP/CMS platforms and third-party services.",
+          "Implemented Supabase for auth, storage, and real-time features.",
+          "Delivered AI/LLM features, including RAG-based architectures."
+        ]
+      },
+      {
+        "role": "Full-Stack Developer",
+        "dates": "Mar 2020 – Apr 2022",
+        "bullets": [
+          "Delivered end-to-end web apps across frontend, backend, and database layers.",
+          "Built backend services with Node.js and PostgreSQL.",
+          "Implemented modular Angular frontends.",
+          "Integrated third-party APIs and internal services."
+        ]
+      },
+      {
+        "role": "Backend / Software Developer",
+        "dates": "Oct 2018 – Jan 2020",
+        "bullets": [
+          "Built REST APIs with Django and Django REST Framework.",
+          "Modeled relational databases and optimized queries.",
+          "Implemented auth, authorization, and validation logic.",
+          "Integrated backend services with frontend apps and external APIs."
+        ]
+      },
+      {
+        "role": "Junior Software Developer",
+        "dates": "Aug 2016 – Jun 2018",
+        "bullets": [
+          "Delivered small-to-medium features under senior guidance.",
+          "Implemented frontend components and backend endpoints.",
+          "Fixed bugs, refactored code, and supported existing apps."
+        ]
+      },
+      {
+        "role": "Programming Intern / Trainee",
+        "dates": "Apr 2015 – Jul 2016",
+        "bullets": [
+          "Assisted in developing simple web apps and internal tools.",
+          "Supported testing, debugging, and documentation tasks.",
+          "Applied programming fundamentals in practical scenarios."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "back": "Back to home",
+    "github": "GitHub",
+    "liveDemo": "Live Demo",
+    "notFound": "Project not found.",
+    "metaTitle": "Project — Portfolio",
+    "items": {
+      "portfolio-nuxt": {
+        "title": "Portfolio Website",
+        "description": "A fast personal portfolio with anchor navigation, project detail pages, and a clean dark UI."
+      },
+      "supabase-app": {
+        "title": "Supabase App",
+        "description": "Example CRUD app using Supabase as the backend."
+      }
+    }
+  }
+}

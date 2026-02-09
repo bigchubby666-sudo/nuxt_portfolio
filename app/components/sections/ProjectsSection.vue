@@ -6,12 +6,12 @@
     :enter="{ opacity: 1, y: 0, transition: { duration: 0.5 } }"
     class="scroll-mt-24"
   >
-    <SectionTitle title="Projects" />
+    <SectionTitle :title="t('sections.projects')" />
     <div class="grid gap-6 sm:grid-cols-2">
       <NuxtLink
-        v-for="(p, index) in projects"
+        v-for="(p, index) in localizedProjects"
         :key="p.slug"
-        :to="`/projects/${p.slug}`"
+        :to="localePath(`/projects/${p.slug}`)"
         v-motion
         :initial="{ opacity: 0, y: 12 }"
         :enter="{ opacity: 1, y: 0, transition: { duration: 0.45, delay: index * 0.08 } }"
@@ -55,5 +55,19 @@
 <script setup lang="ts">
 import { projects } from '~/data/projects'
 import SectionTitle from '~/components/ui/SectionTitle.vue'
+
+const { t, te } = useI18n()
+const localePath = useLocalePath()
+
+const localizedProjects = computed(() =>
+  projects.map((project) => {
+    const base = `projects.items.${project.slug}`
+    return {
+      ...project,
+      title: te(`${base}.title`) ? t(`${base}.title`) : project.title,
+      description: te(`${base}.description`) ? t(`${base}.description`) : project.description,
+    }
+  })
+)
 </script>
 

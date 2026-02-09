@@ -6,7 +6,7 @@
     :enter="{ opacity: 1, y: 0, transition: { duration: 0.5 } }"
     class="scroll-mt-24"
   >
-    <SectionTitle title="Employment History" />
+    <SectionTitle :title="t('sections.employment')" />
 
     <div class="relative mt-8">
       <div
@@ -14,7 +14,7 @@
       </div>
 
       <div class="space-y-10">
-        <div v-for="(item, index) in experiences" :key="item.role" class="relative">
+        <div v-for="(item, index) in localizedExperiences" :key="item.badge" class="relative">
           <div class="md:grid md:grid-cols-2 md:items-start md:gap-8">
             <div v-motion :initial="{ opacity: 0, y: 18 }"
               :enter="{ opacity: 1, y: 0, transition: { duration: 0.5, delay: index * 0.08 } }" :class="[
@@ -49,65 +49,42 @@
 <script setup lang="ts">
 import SectionTitle from '~/components/ui/SectionTitle.vue'
 
+const { t, tm, rt } = useI18n() as {
+  t: (key: string) => string
+  tm: (key: string) => unknown
+  rt: (msg: unknown) => string
+}
+
 const experiences = [
   {
-    role: 'Senior Full-Stack Developer',
-    company: 'FIA Tech — Remote / International Projects',
-    dates: 'May 2022 – Dec 2025',
     badge: 'SF',
-    bullets: [
-      'Owned full-stack platform design using Next.js, Node.js, and PostgreSQL.',
-      'Built scalable REST APIs with auth, validation, and performance focus.',
-      'Led complex API integrations with ERP/CMS platforms and third-party services.',
-      'Implemented Supabase for auth, storage, and real-time features.',
-      'Delivered AI/LLM features, including RAG-based architectures.',
-    ],
   },
   {
-    role: 'Full-Stack Developer',
-    company: 'Henry — Web Platforms & Business Applications',
-    dates: 'Mar 2020 – Apr 2022',
     badge: 'FS',
-    bullets: [
-      'Delivered end-to-end web apps across frontend, backend, and database layers.',
-      'Built backend services with Node.js and PostgreSQL.',
-      'Implemented modular Angular frontends.',
-      'Integrated third-party APIs and internal services.',
-    ],
   },
   {
-    role: 'Backend / Software Developer',
-    company: 'Sabio LA — APIs & Data-Oriented Systems',
-    dates: 'Oct 2018 – Jan 2020',
     badge: 'BE',
-    bullets: [
-      'Built REST APIs with Django and Django REST Framework.',
-      'Modeled relational databases and optimized queries.',
-      'Implemented auth, authorization, and validation logic.',
-      'Integrated backend services with frontend apps and external APIs.',
-    ],
   },
   {
-    role: 'Junior Software Developer',
-    company: 'Globant — Web Applications',
-    dates: 'Aug 2016 – Jun 2018',
     badge: 'JR',
-    bullets: [
-      'Delivered small-to-medium features under senior guidance.',
-      'Implemented frontend components and backend endpoints.',
-      'Fixed bugs, refactored code, and supported existing apps.',
-    ],
   },
   {
-    role: 'Programming Intern / Trainee',
-    company: 'Telefonica — Entry-Level & Academic Projects',
-    dates: 'Apr 2015 – Jul 2016',
     badge: 'IN',
-    bullets: [
-      'Assisted in developing simple web apps and internal tools.',
-      'Supported testing, debugging, and documentation tasks.',
-      'Applied programming fundamentals in practical scenarios.',
-    ],
   },
 ]
+
+const localizedExperiences = computed<
+  Array<{ badge: string; role: string; dates: string; bullets: string[] }>
+>(() =>
+  experiences.map((item, index) => {
+    const base = `employment.items.${index}`
+    const bullets = tm(`${base}.bullets`)
+    return {
+      ...item,
+      role: t(`${base}.role`),
+      dates: t(`${base}.dates`),
+      bullets: Array.isArray(bullets) ? bullets.map((bullet) => rt(bullet)) : [],
+    }
+  })
+)
 </script>
