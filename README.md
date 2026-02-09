@@ -1,13 +1,19 @@
 # Personal Portfolio (Nuxt 4 + Tailwind)
 
-Clean, single-page portfolio built with Nuxt 4 and Tailwind CSS. Includes anchor navigation, a projects grid with detail pages, and a light/dark/system theme toggle.
+Clean, single-page portfolio built with Nuxt 4 and Tailwind CSS. Includes anchor navigation, a timeline-style employment section, animated reveals, project detail pages, and a light/dark/system theme toggle.
+
+![Universidad Tecnologica Nacional](public/universidad_tecnologica_nacional_cover.jpg)
 
 ## Features
 
 - Single-page layout with section anchors (About, Employment, Education, Projects, Contact)
+- Timeline-style employment history with alternating cards
 - Project cards driven by data, with dynamic detail pages
+- Motion-based reveal animations (`@vueuse/motion`)
 - Light/dark/system theme preference saved to local storage
+- Icon buttons via `@nuxt/icon`
 - Tailwind CSS styling with responsive layout
+- Floating scroll-to-top button
 
 ## Setup
 
@@ -82,10 +88,13 @@ bun run preview
 ## Customization
 
 - **Hero + contact**: update content in `app/pages/index.vue`
-- **Section copy**: update components in `app/components/sections/`
+- **Section copy + layout**: update components in `app/components/sections/`
 - **Projects data**: edit `app/data/projects.ts`
 - **Navbar + footer links**: update `app/components/layout/Navbar.vue` and `app/components/layout/Footer.vue`
 - **Theme logic**: tweak `app/composables/useTheme.ts`
+- **Scroll-to-top button**: `app/components/ui/ScrollToTopButton.vue`
+- **Buttons styling**: `app/assets/css/tailwind.css`
+- **Images**: place assets in `public/` (e.g. `public/selfie.jpg`, `public/universidad_tecnologica_nacional_cover.jpg`)
 
 ## Environment Variables (Optional)
 
