@@ -25,6 +25,9 @@
               <p class="text-sm font-semibold text-slate-900 dark:text-white">
                 {{ item.role }}
               </p>
+              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                {{ item.company }}
+              </p>
               <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-700 dark:text-slate-300">
                 <li v-for="bullet in item.bullets" :key="bullet">{{ bullet }}</li>
               </ul>
@@ -74,7 +77,7 @@ const experiences = [
 ]
 
 const localizedExperiences = computed<
-  Array<{ badge: string; role: string; dates: string; bullets: string[] }>
+  Array<{ badge: string; role: string; company: string; dates: string; bullets: string[] }>
 >(() =>
   experiences.map((item, index) => {
     const base = `employment.items.${index}`
@@ -82,6 +85,7 @@ const localizedExperiences = computed<
     return {
       ...item,
       role: t(`${base}.role`),
+      company: t(`${base}.company`),
       dates: t(`${base}.dates`),
       bullets: Array.isArray(bullets) ? bullets.map((bullet) => rt(bullet)) : [],
     }

@@ -27,7 +27,19 @@
     "p2": "Mi experiencia principal se centra en Next.js, Node.js y PostgreSQL, complementada por Supabase, automatizacion de flujos con n8n e integraciones de AI/LLM, incluyendo arquitecturas basadas en RAG. Tambien trabajo comodamente en entornos mixtos con frontends en Angular y backends en Django/DRF."
   },
   "contact": {
-    "body": "Agrega tu metodo de contacto preferido aqui (email, formulario, Calendly, etc).",
+    "kicker": "Ponte en contacto",
+    "title": "Contacto.",
+    "body": "Contame sobre tu proyecto, objetivos o como puedo ayudar. Respondo en 1-2 dias habiles.",
+    "photoAlt": "Foto de la seccion de contacto",
+    "form": {
+      "nameLabel": "Tu Nombre",
+      "namePlaceholder": "Cual es tu nombre?",
+      "emailLabel": "Tu Email",
+      "emailPlaceholder": "Cual es tu email?",
+      "messageLabel": "Tu Mensaje",
+      "messagePlaceholder": "Que queres decir?",
+      "submit": "Enviar"
+    },
     "email": "Enviar email",
     "linkedin": "Mensaje en LinkedIn"
   },
@@ -42,6 +54,7 @@
     "items": [
       {
         "role": "Desarrollador Full-Stack Senior",
+        "company": "FIA Tech — Proyectos remotos / internacionales",
         "dates": "May 2022 – Dec 2025",
         "bullets": [
           "Lidere el diseno de plataformas full-stack con Next.js, Node.js y PostgreSQL.",
@@ -53,6 +66,7 @@
       },
       {
         "role": "Desarrollador Full-Stack",
+        "company": "Henry — Plataformas web y aplicaciones de negocio",
         "dates": "Mar 2020 – Apr 2022",
         "bullets": [
           "Desarrolle apps end-to-end en frontend, backend y base de datos.",
@@ -63,6 +77,7 @@
       },
       {
         "role": "Desarrollador Backend / Software",
+        "company": "Sabio LA — APIs y sistemas orientados a datos",
         "dates": "Oct 2018 – Jan 2020",
         "bullets": [
           "Cree APIs REST con Django y Django REST Framework.",
@@ -73,6 +88,7 @@
       },
       {
         "role": "Desarrollador de Software Junior",
+        "company": "Globant — Aplicaciones web",
         "dates": "Aug 2016 – Jun 2018",
         "bullets": [
           "Entregue funcionalidades pequenas y medianas con supervision senior.",
@@ -82,6 +98,7 @@
       },
       {
         "role": "Practicante / Trainee de Programacion",
+        "company": "Telefonica — Proyectos academicos y de entrada",
         "dates": "Apr 2015 – Jul 2016",
         "bullets": [
           "Asisti en el desarrollo de apps web simples y herramientas internas.",
