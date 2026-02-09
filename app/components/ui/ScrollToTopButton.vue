@@ -1,0 +1,47 @@
+<template>
+  <button
+    v-show="isVisible"
+    type="button"
+    class="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-200/70 bg-white/90 text-sm font-semibold text-slate-800 shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl dark:border-white/15 dark:bg-slate-900/90 dark:text-slate-100"
+    aria-label="Scroll to top"
+    @click="scrollToTop"
+  >
+    <svg
+      class="h-6 w-6"
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M12 44 L32 20 L52 44"
+        stroke="currentColor"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <span class="sr-only">Scroll to top</span>
+  </button>
+</template>
+
+<script setup lang="ts">
+const isVisible = ref(false)
+
+function onScroll() {
+  isVisible.value = window.scrollY > 300
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+onMounted(() => {
+  onScroll()
+  window.addEventListener('scroll', onScroll, { passive: true })
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+})
+</script>
