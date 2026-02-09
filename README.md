@@ -1,6 +1,13 @@
-# Nuxt Minimal Starter
+# Personal Portfolio (Nuxt 4 + Tailwind)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Clean, single-page portfolio built with Nuxt 4 and Tailwind CSS. Includes anchor navigation, a projects grid with detail pages, and a light/dark/system theme toggle.
+
+## Features
+
+- Single-page layout with section anchors (About, Employment, Education, Projects, Contact)
+- Project cards driven by data, with dynamic detail pages
+- Light/dark/system theme preference saved to local storage
+- Tailwind CSS styling with responsive layout
 
 ## Setup
 
@@ -72,4 +79,30 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Customization
+
+- **Hero + contact**: update content in `app/pages/index.vue`
+- **Section copy**: update components in `app/components/sections/`
+- **Projects data**: edit `app/data/projects.ts`
+- **Navbar + footer links**: update `app/components/layout/Navbar.vue` and `app/components/layout/Footer.vue`
+- **Theme logic**: tweak `app/composables/useTheme.ts`
+
+## Environment Variables (Optional)
+
+The config is ready for Supabase, but it is optional unless you wire it up in your app.
+
+```bash
+SUPABASE_URL=your-url
+SUPABASE_PUBLISHABLE_KEY=your-anon-key
+```
+
+## Useful Scripts
+
+- `npm run dev` — start dev server
+- `npm run build` — build for production
+- `npm run preview` — preview production build
+- `npm run generate` — generate static site
+
+## Deployment
+
+Follow the [Nuxt deployment guide](https://nuxt.com/docs/getting-started/deployment) or host on platforms like Vercel or Netlify.
