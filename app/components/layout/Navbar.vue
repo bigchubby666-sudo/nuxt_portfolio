@@ -51,7 +51,7 @@
         </div>
         <ThemeToggle class="hidden sm:inline-flex" />
         <a
-          href="https://github.com/"
+          href="https://github.com/bigchubby666-sudo"
           target="_blank"
           rel="noreferrer"
           class="icon-link"
@@ -61,7 +61,7 @@
           <span class="sr-only">GitHub</span>
         </a>
         <a
-          href="https://www.linkedin.com/in/jonathan-palacio-8766a9216/"
+          href="https://www.linkedin.com/in/roy-andreson-0435733a6/"
           target="_blank"
           rel="noreferrer"
           class="icon-link"

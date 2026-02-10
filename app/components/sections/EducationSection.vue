@@ -12,7 +12,7 @@
     >
       <div class="absolute inset-0">
         <img
-          src="/universidad_tecnologica_nacional_cover.jpg"
+          src="/California Lutheran University.jpg"
           :alt="t('education.photoAlt')"
           class="h-full w-full object-cover"
           loading="lazy"
@@ -20,19 +20,29 @@
         <div class="absolute inset-0 bg-white/75 dark:bg-slate-950/70"></div>
       </div>
       <div class="relative p-6">
-        <div>
-          <p class="font-medium text-slate-900 dark:text-white">
-            {{ t('education.school') }}
-          </p>
-          <p class="text-sm text-slate-600 dark:text-slate-300">{{ t('education.dates') }}</p>
-          <p class="mt-2 text-slate-700 dark:text-slate-200">
-            {{ t('education.program') }}
-          </p>
-        </div>
-        <div class="mt-4">
-          <p class="font-medium text-slate-900 dark:text-white">
-            {{ t('education.degree') }}
-          </p>
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="font-medium text-slate-900 dark:text-white">
+              {{ t('education.school') }}
+            </p>
+            <p class="text-sm text-slate-600 dark:text-slate-300">
+              {{ t('education.dates') }}
+            </p>
+            <p class="mt-2 text-slate-700 dark:text-slate-200">
+              {{ t('education.program') }}
+            </p>
+            <div class="mt-4">
+              <p class="font-medium text-slate-900 dark:text-white">
+                {{ t('education.degree') }}
+              </p>
+            </div>
+          </div>
+          <img
+            src="/CLU-mark.jpg"
+            alt="California Lutheran University mark"
+            class="h-20 w-20 shrink-0 object-contain"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>

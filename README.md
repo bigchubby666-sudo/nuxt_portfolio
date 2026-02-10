@@ -2,7 +2,7 @@
 
 Clean, single-page portfolio built with Nuxt 4 and Tailwind CSS. Includes anchor navigation, a timeline-style employment section, animated reveals, project detail pages, and a light/dark/system theme toggle.
 
-![Universidad Tecnologica Nacional](public/universidad_tecnologica_nacional_cover.jpg)
+![California Lutheran University campus](public/California%20Lutheran%20University.jpg)
 
 ## Features
 
@@ -12,8 +12,14 @@ Clean, single-page portfolio built with Nuxt 4 and Tailwind CSS. Includes anchor
 - Motion-based reveal animations (`@vueuse/motion`)
 - Light/dark/system theme preference saved to local storage
 - Icon buttons via `@nuxt/icon`
+- Localized content with `@nuxtjs/i18n` (English and Spanish)
 - Tailwind CSS styling with responsive layout
 - Floating scroll-to-top button
+
+## Localization
+
+- Locale files live in `i18n/locales/`
+- Default language is configured in `nuxt.config.ts`
 
 ## Setup
 
