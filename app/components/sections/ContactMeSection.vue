@@ -2,7 +2,7 @@
   <section id="contact" class="scroll-mt-24">
     <SectionTitle :title="t('sections.contact')" />
     <div
-      class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw] border-y border-slate-200/60 bg-slate-900/95 text-slate-100 shadow-lg shadow-slate-950/30 dark:border-white/10 dark:bg-slate-900/95"
+      class="relative left-1/2 w-screen -ml-[50vw] border-y border-slate-200/60 bg-slate-900/95 text-slate-100 shadow-lg shadow-slate-950/30 dark:border-white/10 dark:bg-slate-900/95"
     >
       <div class="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <div class="space-y-6">
@@ -59,10 +59,10 @@
             <button type="submit" class="btn-primary" :disabled="status === 'sending'">
               {{ status === 'sending' ? t('contact.form.sending') : t('contact.form.submit') }}
             </button>
-            <a class="btn-secondary" href="mailto:you@example.com">{{ t('contact.email') }}</a>
+            <a class="btn-secondary" href="mailto:bigchubby666@gmail.com">{{ t('contact.email') }}</a>
             <a
               class="btn-secondary"
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/roy-andreson-0435733a6/"
               target="_blank"
               rel="noreferrer"
             >

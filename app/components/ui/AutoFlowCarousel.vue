@@ -79,13 +79,13 @@
       />
     </div>
 
-    <div v-if="hasMultipleImages" class="flex gap-2 overflow-x-auto pb-2">
+    <div v-if="hasMultipleImages" class="flex gap-2 overflow-x-auto p-4">
       <button
         v-for="(image, index) in images"
         :key="image"
         type="button"
-        class="relative h-16 w-24 overflow-hidden rounded-lg border border-transparent transition"
-        :class="index === activeIndex ? 'border-slate-900/70 dark:border-white/80' : 'border-slate-200/60 dark:border-white/10'"
+        class="relative h-16 w-24 overflow-hidden rounded-lg border-2 transition-all duration-200 mr-2"
+        :class="index === activeIndex ? 'border-slate-800 dark:border-white ring-2 ring-slate-800/25 dark:ring-white/25 scale-105' : 'border-slate-200 dark:border-white/10 opacity-60 hover:opacity-90'"
         :aria-label="`View image ${index + 1}`"
         @click="setImage(index)"
       >
