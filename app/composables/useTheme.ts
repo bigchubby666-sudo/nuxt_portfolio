@@ -23,7 +23,7 @@ function applyThemeClass(theme: ThemePreference) {
 }
 
 export function useTheme() {
-  const preference = useState<ThemePreference>('theme-preference', () => 'system')
+  const preference = useState<ThemePreference>('theme-preference', () => 'dark')
 
   if (process.client) {
     if (!window.__themeInitialized) {
